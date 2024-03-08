@@ -243,40 +243,38 @@ body, html {
 .thread {
     flex-direction: column;
     gap: 4px;
-    width: 100%;
+    width: 80%; 
+    max-width: 600px;
     border-width: 0px;
-    padding: 0px;
+    padding: 10px;
     border-radius: 6px;
     border-color: var(--borderColor-default, var(--color-border-default, #30363d));
     border-style: solid;
     word-break: break-word;
 }
 
+.thread-details,
+.thread-content {
+    font-size: 16px;
+    max-width: 100%; 
+    margin: 0 auto;
+}
+
 .thread-details {
     font-weight: 500;
     font-size: 12px;
-    color: #fff;
-    max-width: 80%; 
-    margin: 0 auto; 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     color: var(--bgColor-neutral-emphasis, var(--color-neutral-emphasis, #6e7681));
 }
 
 .thread-title {
     font-weight: 500;
     font-size: 32px;
-    color: #fff;
-    max-width: 80%; 
-    margin: 0 auto; 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .thread-content {
-    font-size: 16px;
     font-weight: 100;
-    color: #fff;
-    max-width: 80%; 
-    margin: 0 auto; 
 }
 
 .blue-box {

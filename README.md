@@ -1,2 +1,3 @@
 # NetCode
-Um blog direcionado a dúvidas e informações sobre o mundo da Tecnologia.
+A blog focused on questions and information about the world of Technology.
+

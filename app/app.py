@@ -114,5 +114,9 @@ def thread(postid):
     if post:
         return render_template('post.html', post=post)
     else:
-        return render_template('error.html', error_message="Postagem não encontrada. 404")
+        return render_template('error.html', error_message="Postagem não encontrada. 404"), 404
+    
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('error.html', error_message="Página não encontrada. 404"), 404
     

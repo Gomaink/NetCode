@@ -2,6 +2,7 @@ from flask import Flask, render_template, session, redirect, request, url_for
 from config.database import init_db, db, User, Post, PostStars
 from flask_bcrypt import Bcrypt
 from sqlalchemy import func 
+import re
 
 # Instanciando a aplicação
 app = Flask(__name__)
@@ -112,6 +113,8 @@ def logout():
 def thread(postid):
     post = Post.query.filter_by(id=postid).first()
     if post:
+        default = r'(http[s]?:\/\/[^\s]+)'
+        post.content = re.sub(default, r'<a href="\1" target="_blank">\1</a>', post.content)
         return render_template('post.html', post=post)
     else:
         return render_template('error.html', error_message="Postagem não encontrada. 404"), 404

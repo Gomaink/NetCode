@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/code-icon.png') }}">
-    <title>NetCode - Erro</title>
+    <title>NetCode</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/log-out.css' rel='stylesheet'>
@@ -27,12 +27,20 @@
                 <li class="forward"><a href="{{ url_for('login') }}"><i class="gg-log-in"></i></a></li>
             {% endif %}
         </ul>
-        <div class="post">
-            <div class="post-header">
-                {% if error_message %}
-                <p>{{ error_message }}</p>
-                {% endif %}
-            </div>
+        <div class="new-post">
+            <form class="publish-form" method="post" action="{{ url_for('publish') }}">
+                <h1>Publicar novo conteúdo</h1>
+                <h3>Título *</h3>
+                <input type="text" placeholder="e.g. Como um computador funciona" name="title">
+                <h3>Conteúdo *</h3>
+                <textarea class="publish-content" rows="15"></textarea>
+                <input type="submit" value="Publicar">
+                <div class="errors">
+                    {% if error_message %}
+                    <p>{{ error_message }}</p>
+                    {% endif %}
+                </div>
+            </form>
         </div>
     </div>
 </body>

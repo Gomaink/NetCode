@@ -119,6 +119,13 @@ def thread(postid):
     else:
         return render_template('error.html', error_message="Postagem não encontrada. 404"), 404
     
+@app.route('/publish')
+def publish():
+    if 'user_id' in session:
+        return render_template('new_post.html')
+    else:
+        return render_template('login.html')
+    
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('error.html', error_message="Página não encontrada. 404"), 404

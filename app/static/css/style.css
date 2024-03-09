@@ -277,6 +277,47 @@ body, html {
     font-weight: 100;
 }
 
+.thread-coment {
+    width: 100%;
+}
+.thread-coment-box {
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: var(--borderColor-default, var(--color-border-default, #30363d));
+    border-style: solid;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    padding: 24px;
+    overflow-wrap: break-word;
+}
+.thread-coment-button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    user-select: none;
+    text-align: center;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: 32px;
+    min-width: max-content;
+    color: var(--button-default-fgColor-rest, var(--color-btn-text, #000));
+    background-color: var(--button-default-bgColor-rest, var(--color-btn-bg, #fff));
+    box-shadow: var(--button-default-shadow-resting, var(--color-btn-shadow, 0 0 transparent)),var(--button-default-shadow-inset, var(--color-btn-inset-shadow, 0 0 transparent));
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: var(--button-default-borderColor-rest, var(--button-default-borderColor-rest, var(--color-btn-border, rgba(240,246,252,0.1))));
+    text-decoration: none;
+    padding: 0px 12px;
+    gap: 8px;
+}
+
 .blue-box {
     background-color: var(--bgColor-accent-muted, var(--color-accent-subtle, rgba(56,139,253,0.1)));
     color: var(--fgColor-accent, var(--color-accent-fg, #2f81f7));
